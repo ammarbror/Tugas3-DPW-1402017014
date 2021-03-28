@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/path/to/tailwind.css" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <!-- ... -->
+        <title>Rumus Silinder</title>
+    </head>
+    <body onload="askName()" style="background-color: #a1cdff;">
+        <script src="./script.js"></script>
+        <!-- NAVBAR -->
+        <div class="fixed flex p-1 px-4 bg-gray-200 w-screen">
+            <div class="flex-1 flex-row space-x-6">
+                <div class="inline-block">
+                    &#x1f525
+                </div>
+                <a class="inline-block font-bold" href="./index.php">Ammar Abror</a>
+                <a class="inline-block" href="./silinder.html">Silinder</a>
+                <a class="inline-block" href="./kerucut.html">Kerucut</a>
+                <a class="inline-block" href="./bola.html">Bola</a>
+            </div>
+            <div class="flex-2 flex-row-reserve">
+                <div class="flex flex-row space-x-4">
+                    <p>Follow Me</p>
+                    <a class="inline-block font-bold" href="https://www.instagram.com/ammarbror/">
+                        <img src="./img/i_instagram.png" style="height: 22px;" alt="Instagram">
+                    </a>
+                    <a class="inline-block font-bold" href="https://dribbble.com/ammarbror">
+                        <img src="./img/i_dribbble.png" style="height: 22px;" alt="Instagram">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <!--  -->
+        <div class="bg-cover bg-center h-screen p-16" style="background-image: url(./img/bg.png);">
+            <div class="flex flex-column justify-center" style="height: 520px;">
+                
+                <div class="bg-white shadow-xl rounded-xl " style="width: 1000px;">
+                    <div class="p-1 bg-blue-200 rounded-tl-xl rounded-tr-xl" style="width: 1000px;">
+                        <h1 class="font-bold" style="text-align: center;">Silinder</h1>
+                    </div>
+                    <form action="" class="form bg-white p-2 p-16">
+                        <h3 class="text-2xl text-gray-900 font-semibold">Silinder</h3>
+                        <p class="text-gray-600" id="showName"></p>
+                        <div class="flex space-x-8">
+                            <div class="w-1/3">
+                                <img src="./img/silinder.png" alt="" >
+                            </div>
+                            <div class="w-1/2">
+                                <h3 class="text-2xl text-gray-900 font-semibold">Masukan Nilai :</h3>
+                                <p class="text-gray-900 mt-3">Masukan jari - jari Silinder (dalam meter)</p>
+                                <input type="number" step="any" id="jariSilinder" placeholder="Jari Jari Silinder" class="border p-2  w-full rounded-lg mt-1">
+                                
+                                <p class="text-gray-900 mt-3">Masukan tinggi Silinder (dalam meter)</p>
+                                <input type="number" step="any" id="tinggiSilinder" placeholder="Tinggi Silinder" class="border p-2  w-full rounded-lg mt-1">
+
+                                <input type="button" value="Hitung" onclick="countSilinder()" class="w-full mt-6 bg-blue-400 hover:bg-blue-500 text-white font-semibold p-3 rounded-lg">
+                            </div>
+                            <div class="w-1/2">
+                                <h3 class="text-2xl text-gray-900 font-semibold">Hasil Perhitungan :</h3>
+                                <p class="text-gray-900 mt-3" id="luasPermukaanSilinder"></p>
+                                <p class="text-gray-900 mt-3" id="volumeSilinder"></p>
+                            </div>
+                        </div>
+                        
+        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
