@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/silinder.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./silinder_files/tailwind.css" rel="stylesheet">
+        <link href="./silinder_files/tailwind.min.css" rel="stylesheet">
+        <!-- ... -->
+    </head>
+    <body onload="askName()" cz-shortcut-listen="true">
+        <script src="./silinder_files/script.js"></script>
+        <!-- NAVBAR -->
+        <div class="fixed flex p-1 px-4 bg-gray-200 w-screen">
+            <div class="flex-1 flex-row space-x-6">
+                <div class="inline-block">
+                    🔥
+                </div>
+                <a class="inline-block font-bold" href="http://127.0.0.1:5500/index.php">Ammar Abror</a>
+                <a class="inline-block" href="http://127.0.0.1:5500/myProject.html">My Project</a>
+                <a class="inline-block" href="http://127.0.0.1:5500/aboutMe.html">About Me</a>
+                <a class="inline-block" href="http://127.0.0.1:5500/contactMe.html">Contact Me</a>
+            </div>
+            <div class="flex-2 flex-row-reserve">
+                <div class="flex flex-row space-x-4">
+                    <p>Follow Me</p>
+                    <a class="inline-block font-bold" href="https://www.instagram.com/ammarbror/">
+                        <img src="./silinder_files/i_instagram.png" style="height: 22px;" alt="Instagram">
+                    </a>
+                    <a class="inline-block font-bold" href="https://dribbble.com/ammarbror">
+                        <img src="./silinder_files/i_dribbble.png" style="height: 22px;" alt="Instagram">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <!--  -->
+        <div class="bg-cover bg-center h-screen p-16" style="background-image: url(./img/bg.png);">
+            <div class="flex flex-column justify-center" style="height: 520px;">
+                
+                <div class="bg-white shadow-xl rounded-xl " style="width: 1000px;">
+                    <div class="p-1 bg-blue-200 rounded-tl-xl rounded-tr-xl" style="width: 1000px;">
+                        <h1 class="font-bold" style="text-align: center;">Silinder</h1>
+                    </div>
+                    <form action="http://127.0.0.1:5500/silinder.html" class="form bg-white p-2 p-16">
+                        <h3 class="text-2xl text-gray-900 font-semibold">Silinder</h3>
+                        <p class="text-gray-600" id="showName">Welcome, Stranger!</p>
+                        <div class="flex space-x-8">
+                            <div class="w-1/2">
+                                <p class="text-gray-900 mt-3">Masukan jari - jari Silinder (dalam meter)</p>
+                                <input type="number" step="any" id="jariSilinder" placeholder="Jari Jari Silinder" class="border p-2  w-full rounded-lg mt-1">
+                                
+                                <p class="text-gray-900 mt-3">Masukan tinggi Silinder (dalam meter)</p>
+                                <input type="number" step="any" id="tinggiSilinder" placeholder="Tinggi Silinder" class="border p-2  w-full rounded-lg mt-1">
+
+                                <input type="button" value="Submit" onclick="countSilinder()" class="w-full mt-6 bg-blue-400 hover:bg-blue-500 text-white font-semibold p-3 rounded-lg">
+                            </div>
+                            <div class="w-1/2">
+                                <!-- <img src="./img/silinder.png" alt="" width="100"> -->
+                                <!-- <img src="./img/silinder.png" alt="" width="100"> -->
+                                <h3 class="text-2xl text-gray-900 font-semibold">Hasil Perhitungan :</h3>
+                                <p class="text-gray-900 mt-3" id="luasPermukaanSilinder"></p>
+                                <p class="text-gray-900 mt-3" id="volumeSilinder"></p>
+                            </div>
+                        </div>
+                        
+        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
